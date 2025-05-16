@@ -43,4 +43,29 @@ body {
   .col-md-3 {
     width: 17%;
   }
-  
+  <style>
+  .film-seridi {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-image: url("img/filmseridi.jpg"); /* Arka planını senin görselinle yapıyoruz */
+    background-repeat: repeat-x;
+    background-size: cover;
+    padding: 30px 10px;
+    border-radius: 10px;
+  }
+
+  .film-seridi img {
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 10px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+  }
+
+  h2 {
+    margin-top: 40px;
+  }
+</style>
