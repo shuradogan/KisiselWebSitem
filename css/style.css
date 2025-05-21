@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: white; /* Metinler görünür kalsın */
+  color: rgb(0, 0, 0); /* Metinler görünür kalsın */
 }
 
 /* Sayfa kenarlarında yukarıdan aşağı film şeridi */
