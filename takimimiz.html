@@ -2,92 +2,108 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Takımımız</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Takımımız - Ankaragücü</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="bg-primary text-white p-3">
-    <h1 class="text-center">Takımımız: ANKARAGÜCÜ</h1>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark film-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎬 Ben Kimim?</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link active" href="takimimiz.html">Takımımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Başlık -->
+  <header class="bg-warning text-dark text-center py-5">
+    <div class="container">
+      <h1>⚽ MKE Ankaragücü</h1>
+      <p>Başkent'in gururu, sarı lacivert!</p>
+    </div>
   </header>
 
-  <main class="container mt-4">
-    <!-- Takım Tanıtımı -->
+  <!-- İçerik -->
+  <main class="container my-5">
+    <section class="mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="img/takim1.jpg" alt="Ankaragücü Logo" class="img-fluid polaroid">
+        </div>
+        <div class="col-md-6">
+          <h2>Ankaragücü Hakkında</h2>
+          <p>MKE Ankaragücü, 1911 yılında kurulan ve Türkiye'nin en köklü kulüplerinden biridir. Ankara'nın en önemli futbol takımı olan kulüp, sarı-lacivert renkleriyle bilinir ve maçlarını Eryaman Stadyumu'nda oynamaktadır.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h3>Kulüp Bilgileri</h3>
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Kuruluş Yılı</th>
+          <td>1911</td>
+        </tr>
+        <tr>
+          <th>Stadyum</th>
+          <td>Eryaman Stadyumu</td>
+        </tr>
+        <tr>
+          <th>Renkler</th>
+          <td>Sarı - Lacivert</td>
+        </tr>
+        <tr>
+          <th>Başarılar</th>
+          <td>1 Türkiye Kupası Şampiyonluğu (1981), Süper Lig ve 1. Lig tecrübeleri</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="mb-5">
+      <h3>Unutulmaz Oyuncular</h3>
+      <ul>
+        <li>Tarık Daşgün</li>
+        <li>Hakan Kutlu</li>
+        <li>Osman Özdemir</li>
+        <li>Konrad Wrzesiński (güncel kadro örneği)</li>
+      </ul>
+    </section>
+
     <section>
-    
-      <p><!DOCTYPE html>
-        <html lang="tr">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Takımımız</title>
-        
-          <!-- Bootstrap CSS -->
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-          <link rel="stylesheet" href="css/style.css">
-        </head>
-        <body>
-        
-          
-          <main class="container mt-4">
-            <!-- Takım Tanıtımı -->
-            <section>
-              <h2>ANKARAGÜCÜ HAKKINDA</h2>
-              <p>Ankaragücü, Ankara’nın en köklü futbol kulübüdür. 1911 yılında kurulmuştur ve Türkiye'nin en eski futbol takımlarından biridir. Renkleri sarı-laciverttir. "Başkent’in takımı" olarak bilinir ve taraftar grubu Gecekondu çok tutkuludur.</p>
-            </section>
-        
-            <!-- Başarılar -->
-            <section>
-              <h2>Başarılar</h2>
-              <ul>
-                <li>Türkiye Kupası Şampiyonu: 1971-1972 sezonu</li>
-                <li>Türkiye Süper Kupası (Cumhurbaşkanlığı Kupası): 1981</li>
-                <li>Uzun yıllar Süper Lig’de mücadele etti; inişli çıkışlı sezonlar yaşadı.</li>
-                <li>2022-2023 sezonunda Süper Lig'de mücadele etti, ancak düşme-kalma hattında dalgalandı.</li>
-              </ul>
-            </section>
-        
-            <!-- Önemli Oyuncular -->
-            <section>
-              <h2>Önemli Oyuncular</h2>
-              <ul>
-                <li>Hakan Kutlu – 15 yıl boyunca Ankaragücü formasını terleterek kaptanlık yapmış, istikrarı ve liderliğiyle kulübün simgesi haline gelmiştir.</li>
-                <li>Tarık Daşgün – Yaratıcı oyun tarzı ve teknik becerisiyle 90’larda takımın hücum gücünü taşıyan isimlerden biri olmuştur.</li>
-                <li>Roman Bednář – Kısa süre oynamasına rağmen attığı kritik gollerle taraftarın sevgisini kazanmış ve takımın hücum hattına dinamizm katmıştır.</li>
-              </ul>
-            </section>
-        
-            <!-- Takımın Görselleri -->
-            <section>
-              <h2>Takımın Görselleri</h2>
-              <div class="row">
-                <div class="col-md-4">
-                  <img src="img/takim1.jpg" class="img-fluid" alt="Takım Resmi 1">
-                </div>
-                <div class="col-md-4">
-                  <img src="img/takim2.jpg" class="img-fluid" alt="Takım Resmi 2">
-                </div>
-              </div>
-            </section>
-        
-          </main>
-        
-          <footer class="bg-light text-center p-3 mt-5">
-            &copy; 2025 Şura Doğan
-          </footer>
-        
-          <!-- Bootstrap JS ve gerekli dosyalar burda-->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        </body>
-        </html>
-        </p>
+      <h3>Polaroid Anılar 📸</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/takim2.jpg" class="img-fluid polaroid" alt="Ankaragücü Taraftarı">
+        </div>
+        <div class="col-md-4">
+          <img src="img/takim3.jpg" class="img-fluid polaroid" alt="Maçtan Görüntü">
+        </div>
+        <div class="col-md-4">
+          <img src="img/ankaragucu_efsane.jpg" class="img-fluid polaroid" alt="Efsane Kadro">
+        </div>
+      </div>
     </section>
   </main>
 
- 
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p>🎬 @2025 | Web Teknolojileri Projesi - [Ad Soyad]</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

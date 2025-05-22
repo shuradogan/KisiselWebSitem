@@ -2,189 +2,88 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Film Şeridi - Şura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body, html {
-      height: 100%;
-      overflow: hidden;
-      font-family: sans-serif;
-    }
-
-    .film-strip-wrapper {
-      display: flex;
-      height: 100vh;
-      width: 900vw; /* 9 sahne olduğu için 9x100 = 900vw */
-      transition: transform 0.6s ease-in-out;
-    }
-
-    .section {
-      width: 100vw;
-      height: 100vh;
-      padding: 50px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: black;
-    }
-
-    .s1 { background: #000 url("img/filmseridi.jpg"); background-size: cover; }
-    .s2 { background: #111 url("img/filmseridi.jpg") repeat; background-size: cover; }
-    .s3 { background: #222 url("img/filmseridi.jpg") repeat; background-size: cover; }
-    .s4 { background: #333 url("img/filmseridi.jpg") repeat; background-size: cover; }
-    .s5 { background: #444 url("img/filmseridi.jpg") repeat; background-size: cover; }
-    .s6 { background: #555 url("img/filmseridi.jpg") repeat; background-size: cover; }
-    .s7 { background: #666 url("img/filmseridi.jpg") repeat; background-size: cover; }
-    .s8 { background: #777 url("img/filmseridi.jpg") repeat; background-size: cover; }
-    .s9 { background: #888 url("img/filmseridi.jpg") repeat; background-size: cover; }
-
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-    }
-
-    ul {
-      font-size: 1.5rem;
-    }
-
-    img {
-      width: 300px;
-      margin: 10px;
-      border: 5px solid black;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      font-size: 3rem;
-      color: white;
-      background: rgba(0,0,0,0.5);
-      padding: 10px 20px;
-      border-radius: 50%;
-      cursor: pointer;
-      user-select: none;
-    }
-    .left-arrow {
-  left: 20px;
-  right: auto;
-}
-
-
-    a.btn {
-      transition: all 0.3s ease;
-    }
-
-    a.btn:hover {
-      transform: scale(1.1);
-    }
-  </style>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Hakkımda</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="film-strip-wrapper" id="slider">
-    <!-- Sahneler -->
-    <section class="section s1">
-      <h1>Merhaba! Ben Şura</h1>
-      <p>Bu web sitesinde kendimi ve memleketimi tanıtıyorum.</p>
-    </section>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark film-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">🎬 Ben Kimim?</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section class="section s2">
-      <h1>Hobilerim</h1>
-      <ul><li>Dizi-Film İzlemek</li></ul>
-      <img src="img/etkinlik1.jpeg" alt="">
-    </section>
+  <!-- Giriş Bölümü -->
+  <header class="text-center bg-dark text-light py-5 film-header">
+    <div class="container">
+      <h1 class="display-4">🎥 Merhaba, Ben [Ad Soyad]</h1>
+      <p class="lead">Bilgisayar mühendisliği öğrencisi olarak kodlamaya ve sinema dünyasına meraklıyım.</p>
+    </div>
+  </header>
 
-    <section class="section s3">
-      <h1>Hobilerim</h1>
-      <ul><li>Yazı Yazmak</li></ul>
-      <img src="img/etkinlik2.jpeg" alt="">
-    </section>
+  <!-- Hakkımda -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Hakkımda</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="img/polaroid1.jpg" alt="Ben" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <p>Merhaba! Ben bilgisayar mühendisliği 1. sınıf öğrencisiyim. Yazılım geliştirmeye, teknolojiye, filmlere ve sinema estetiğine ilgim var. Boş zamanlarımda web geliştirme öğreniyor, fotoğraf çekiyor ve film analizleri yapıyorum.</p>
+        <p><strong>Hobilerim:</strong> Kodlama, Film izlemek, Fotoğrafçılık, Gezmeyi severim.</p>
+        <p><strong>Favori Spor:</strong> Futbol</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section s4">
-      <h1>Hobilerim</h1>
-      <ul><li>Örgü Örmek/Dikiş</li></ul>
-      <img src="img/etkinlik3.jpeg" alt="">
-    </section>
+  <!-- Polaroid Tarzı Galeri -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Favori Anlarım 🎞️</h2>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <img src="img/foto1.jpg" class="img-polaroid mb-2" alt="Etkinlik 1">
+          <p>Film Festivali</p>
+        </div>
+        <div class="col-md-3">
+          <img src="img/foto2.jpg" class="img-polaroid mb-2" alt="Etkinlik 2">
+          <p>Kodlama Maratonu</p>
+        </div>
+        <div class="col-md-3">
+          <img src="img/foto3.jpg" class="img-polaroid mb-2" alt="Etkinlik 3">
+          <p>Yaz Kampı</p>
+        </div>
+        <div class="col-md-3">
+          <img src="img/foto4.jpg" class="img-polaroid mb-2" alt="Etkinlik 4">
+          <p>Sinema Kulübü</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section s5">
-      <h1>ÖZGEÇMİŞİM</h1>
-      <a href="cv.html" class="btn btn-light mt-3">CV Sayfasına Git</a>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p>🎬 @2025 | Web Teknolojileri Projesi - [Ad Soyad]</p>
+  </footer>
 
-    <section class="section s6">
-      <h1>Şehrim</h1>
-      <a href="sehrim.html" class="btn btn-light mt-3">Şehrim Sayfasına Git</a>
-    </section>
-
-    <section class="section s7">
-      <h1>Takımımız</h1>
-      <a href="takimimiz.html" class="btn btn-light mt-3">Takımımız Sayfasına Git</a>
-    </section>
-
-    <section class="section s8">
-      <h1>İlgi Alanlarım</h1>
-      <a href="ilgialanlarim.html" class="btn btn-light mt-3">İlgi Alanlarım Sayfasına Git</a>
-    </section>
-
-    <section class="section s9">
-      <h1>Beni Takip Et</h1>
-      <p>
-        <a href="https://www.instagram.com/ssuradogn/" target="_blank" style="color: lightblue;">Instagram</a> |
-        <a href="https://www.linkedin.com/in/ssuradogn/" target="_blank" style="color: lightblue;">LinkedIn</a>
-      </p>
-    </section>
-  </div>
-
-  <!-- Ok butonu -->
-  <div class="arrow" onclick="nextSlide()">></div>
-
-  <script>
-    let currentSlide = 0;
-    const totalSlides = 9;
-
-    function nextSlide() {
-      const wrapper = document.getElementById('slider');
-      currentSlide = (currentSlide + 1) % totalSlides;
-      wrapper.style.transform = `translateX(-${currentSlide * 100}vw)`;
-    }
-    function prevSlide() {
-  const wrapper = document.getElementById('slider');
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  wrapper.style.transform = `translateX(-${currentSlide * 100}vw)`;
-}
-
-  function goToSlide(index) {
-    const wrapper = document.getElementById('slider');
-    currentSlide = index;
-    wrapper.style.transform = `translateX(-${currentSlide * 100}vw)`;
-  }
-
-
-  </script>
-<!-- Sol ok butonu -->
-<div class="arrow left-arrow" onclick="prevSlide()"><</div>
-<!-- Sağ ok butonu -->
-<div class="arrow" onclick="nextSlide()">></div>
-<div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10;">
-  <img src="img/thumb1.jpg" onclick="goToSlide(0)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb2.jpg" onclick="goToSlide(1)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb3.jpg" onclick="goToSlide(2)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb4.jpg" onclick="goToSlide(3)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb5.jpg" onclick="goToSlide(4)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb6.jpg" onclick="goToSlide(5)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb7.jpg" onclick="goToSlide(6)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb8.jpg" onclick="goToSlide(7)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-  <img src="img/thumb9.jpg" onclick="goToSlide(8)" style="width: 60px; cursor: pointer; border: 2px solid white;">
-</div>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
