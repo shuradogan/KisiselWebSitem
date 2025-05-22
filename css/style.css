@@ -16,6 +16,51 @@ body {
   height: auto;
   object-fit: cover;
 }
+.navbar-brand, h1, h2 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* CV Sayfasına Özel */
+main section {
+  margin-bottom: 2rem;
+}
+
+aside {
+  background-color: #f9f9f9;
+  border-left: 6px solid #666;
+  font-style: italic;
+}
+
+figure img {
+  border: 8px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+.polaroid {
+  border: 10px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  transform: rotate(-1deg);
+}
+.film-navbar {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url('img/filmstrip_bg.jpg');
+  background-size: cover;
+}
+.polaroid {
+  border: 10px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  margin: 10px 0;
+  transition: 0.3s;
+}
+.polaroid:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
 
 .navbar-brand, h1, h2 {
   font-family: 'Permanent Marker', cursive;
