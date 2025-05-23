@@ -2,88 +2,149 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Film Şeridi Slayt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Special Elite', cursive;
-      background: #f4e6c3;
-      color: #3b2f2f;
-    }
-
-    header {
-      background-color: #2c1f1f;
-      color: #f4e6c3;
-      text-align: center;
-      padding: 30px 0;
-      font-size: 2em;
-      letter-spacing: 2px;
-    }
-
-    .slider-container {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .slider-track {
-      display: flex;
-      transition: transform 1s ease;
-      width: calc(200px * 5); /* 5 frame varsayıldı */
-    }
-
-    .film-frame {
-      width: 200px;
-      height: 150px;
-      margin: 25px 10px;
-      flex-shrink: 0;
-      background-size: cover;
-      background-position: center;
-      filter: sepia(0.6) contrast(1.2);
-      border: 10px solid #fff;
-      border-style: double;
-    }
-
-    footer {
-      background-color: #2c1f1f;
-      color: #f4e6c3;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İletişim</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.prod.js"></script>
 </head>
 <body>
 
-<header>📽️ Nostaljik Slayt Gösterisi</header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark film-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎬 Ben Kimim?</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<div class="slider-container">
-  <div class="slider-track" id="slider">
-    <div class="film-frame" style="background-image: url('https://i.imgur.com/aCzF6VD.jpeg');"></div>
-    <div class="film-frame" style="background-image: url('https://i.imgur.com/ODOb4lK.jpeg');"></div>
-    <div class="film-frame" style="background-image: url('https://i.imgur.com/mM3gJGQ.jpeg');"></div>
-    <div class="film-frame" style="background-image: url('https://i.imgur.com/Ek9ThqX.jpeg');"></div>
-    <div class="film-frame" style="background-image: url('https://i.imgur.com/ODOb4lK.jpeg');"></div> <!-- tekrar -->
-  </div>
-</div>
+  <!-- Form Alanı -->
+  <main class="container my-5" id="app">
+    <h2 class="text-center mb-4">📩 Bize Ulaşın</h2>
 
-<footer>© 2025 Nostaljik Web Tasarımı</footer>
+    <form id="contactForm" @submit.prevent="validateForm" method="POST" action="form-sonuc.html">
+      <div class="mb-3">
+        <label>Ad Soyad</label>
+        <input type="text" class="form-control" v-model="form.adsoyad">
+      </div>
+      <div class="mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" v-model="form.email">
+      </div>
+      <div class="mb-3">
+        <label>Telefon</label>
+        <input type="text" class="form-control" v-model="form.telefon">
+      </div>
+      <div class="mb-3">
+        <label>Cinsiyet</label><br>
+        <input type="radio" value="Erkek" v-model="form.cinsiyet"> Erkek
+        <input type="radio" value="Kadın" v-model="form.cinsiyet" class="ms-3"> Kadın
+      </div>
+      <div class="mb-3">
+        <label>Şehir</label>
+        <select class="form-select" v-model="form.sehir">
+          <option value="">Seçiniz</option>
+          <option>Ankara</option>
+          <option>İstanbul</option>
+          <option>İzmir</option>
+          <option>Diğer</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label>Mesaj</label>
+        <textarea class="form-control" v-model="form.mesaj"></textarea>
+      </div>
+      <div class="mb-3">
+        <input type="checkbox" v-model="form.haber"> Haber bültenine katılmak istiyorum
+      </div>
 
-<script>
-  let index = 0;
-  const slider = document.getElementById("slider");
-  const total = slider.children.length;
-  const slideWidth = 220; // 200px + margin
+      <button type="button" class="btn btn-secondary me-2" @click="resetForm">Temizle (Vue.js)</button>
+      <button type="submit" class="btn btn-primary">Gönder (Vue.js)</button>
+    </form>
 
-  setInterval(() => {
-    index = (index + 1) % total;
-    slider.style.transform = `translateX(-${index * slideWidth}px)`;
-  }, 3000); // Her 3 saniyede bir kay
-</script>
+    <hr class="my-5">
+
+    <h4>🎯 JavaScript ile Ek Kontrol</h4>
+    <button class="btn btn-warning" onclick="kontrolEt()">Formu JavaScript ile Kontrol Et</button>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p>🎬 @2025 | Web Teknolojileri Projesi - [Ad Soyad]</p>
+  </footer>
+
+  <!-- JS Script -->
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          form: {
+            adsoyad: '',
+            email: '',
+            telefon: '',
+            cinsiyet: '',
+            sehir: '',
+            mesaj: '',
+            haber: false
+          }
+        };
+      },
+      methods: {
+        validateForm() {
+          if (!this.form.adsoyad || !this.form.email || !this.form.telefon || !this.form.cinsiyet || !this.form.sehir || !this.form.mesaj) {
+            alert("Tüm alanları doldurun!");
+            return;
+          }
+          if (!this.form.email.includes("@")) {
+            alert("Geçerli bir e-posta girin!");
+            return;
+          }
+          // Başarılı gönderim
+          document.getElementById("contactForm").submit();
+        },
+        resetForm() {
+          this.form = {
+            adsoyad: '',
+            email: '',
+            telefon: '',
+            cinsiyet: '',
+            sehir: '',
+            mesaj: '',
+            haber: false
+          };
+        }
+      }
+    }).mount("#app");
+
+    // Düz JS ile kontrol
+    function kontrolEt() {
+      const email = document.querySelector('input[type=email]').value;
+      const telefon = document.querySelector('input[type=text]').value;
+      if (!/^\d+$/.test(telefon)) {
+        alert("Telefon numarası sadece rakamlardan oluşmalıdır!");
+        return;
+      }
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Geçerli bir e-posta adresi girin!");
+        return;
+      }
+      alert("JavaScript kontrolü başarılı!");
+    }
+  </script>
 
 </body>
 </html>
-

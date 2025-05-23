@@ -1,101 +1,109 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  background-image: url("img/filmseridi.jpg");
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.film-header {
+  background-image: url('../img/film-strip-bg.jpg'); /* Arka plan temalı bir film şeridi resmi */
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  color: rgb(0, 0, 0); /* Metinler görünür kalsın */
 }
 
-/* Sayfa kenarlarında yukarıdan aşağı film şeridi */
-.film-left, .film-right {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 40px;
-  background-image: url('img/filmseridi3.png'); /* Bu PNG dikey film şeridi olmalı */
-  background-repeat: repeat-y;
-  background-size: cover;
-  z-index: 1000;
-  opacity: 0.7;
-}
-
-.film-left { left: 0; }
-.film-right { right: 0; }
-
-main {
-  padding-left: 50px;
-  padding-right: 50px;
-  position: relative;
-  z-index: 2;
-}
-
-/* Kartlar (örneğin takım sayfası için kullanılabilir) */
-.container {
-  margin-top: 20px;
-}
-
-.card {
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
+.img-polaroid {
+  border: 10px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
-  border-radius: 10px;
+}
+.navbar-brand, h1, h2 {
+  font-family: 'Permanent Marker', cursive;
 }
 
-.card-body {
-  text-align: center;
+/* CV Sayfasına Özel */
+main section {
+  margin-bottom: 2rem;
 }
 
-.card-title {
-  font-size: 1rem;
-  font-weight: bold;
+aside {
+  background-color: #f9f9f9;
+  border-left: 6px solid #666;
+  font-style: italic;
 }
 
-.card-text {
-  color: #ddd;
-  font-size: 0.8rem;
+figure img {
+  border: 8px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive card satırı */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+.polaroid {
+  border: 10px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  transform: rotate(-1deg);
+}
+.film-navbar {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url('img/filmstrip_bg.jpg');
+  background-size: cover;
+}
+.polaroid {
+  border: 10px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  margin: 10px 0;
+  transition: 0.3s;
+}
+.polaroid:hover {
+  transform: scale(1.03) rotate(-1deg);
 }
 
-.col-md-3 {
-  flex: 1 1 calc(25% - 20px);
-  max-width: calc(25% - 20px);
+.navbar-brand, h1, h2 {
+  font-family: 'Permanent Marker', cursive;
 }
 
-/* Film şeridi tarzı yatay scroll alan */
-.film-strip {
-  overflow-x: auto;
-  white-space: nowrap;
-  background-image: url("img/filmseridi.jpg");
-  background-repeat: repeat-x;
-  background-size: contain;
-  background-position: center;
-  background-color: black;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
+/* CV Sayfasına Özel */
+main section {
+  margin-bottom: 2rem;
 }
 
-.film-strip::-webkit-scrollbar {
-  display: none;
+aside {
+  background-color: #f9f9f9;
+  border-left: 6px solid #666;
+  font-style: italic;
 }
 
-.film-card {
-  flex: 0 0 auto;
-  width: 150px;
+figure img {
+  border: 8px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+.polaroid {
+  border: 10px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  transform: rotate(-1deg);
+}
+.film-navbar {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url('img/filmstrip_bg.jpg');
+  background-size: cover;
+}
+.polaroid {
+  border: 10px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  margin: 10px 0;
+  transition: 0.3s;
+}
+.polaroid:hover {
+  transform: scale(1.03) rotate(-1deg);
 }

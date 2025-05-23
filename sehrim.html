@@ -2,177 +2,106 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Şehrim - Ankara</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    .film-left, .film-right {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  background-image: url('img/filmseridi3.png');
-  background-repeat: repeat-y;
-  background-size: contain;
-  z-index: 999;
-  opacity: 0.8;
-}
-
-.film-left {
-  left: 0;
-}
-
-.film-right {
-  right: 0;
-}
-
-main {
-  padding-left: 50px;
-  padding-right: 50px;
-  z-index: 1;
-  position: relative;
-}
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f8fb;
-    }
-
-    h1, h2, h3 {
-      color: #003366;
-    }
-
-    .carousel-item img {
-      height: 400px;
+    .slider img {
+      height: 300px;
       object-fit: cover;
-      border-radius: 10px;
+      cursor: pointer;
     }
-
-    .btn-primary {
-      background-color: #003366;
-      border-color: #003366;
-    }
-
-    .btn-primary:hover {
-      background-color: #9561c3;
-    }
-
     section {
-      margin-top: 40px;
-    }
-
-    .img-fluid {
-      border-radius: 10px;
-    }
-
-    .footer {
-      background-color: #003366;
-      color: white;
+      padding: 60px 0;
     }
   </style>
 </head>
 <body>
-<!-- Film Şeridi Kenarları -->
-<div class="film-left"></div>
-<div class="film-right"></div>
 
-  <header class="bg-primary text-white p-4 text-center">
-    <h1>Şehrim: Ankara</h1>
-    <p>Türkiye’nin kalbi, kültür ve tarih ile iç içe bir başkent.</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark film-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎬 Ben Kimim?</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Başlık -->
+  <header class="bg-secondary text-light text-center py-5">
+    <h1>🎥 Ankara – Başkentimizin Film Gibi Güzellikleri</h1>
+    <p class="lead">Film klaketi gibi tarih dolu, kamera gibi dikkat çeken bir şehir</p>
   </header>
 
-  <main class="container mt-4">
-    <!-- Şehir Hakkında Bilgiler -->
-    <section>
-      <h2>Şehir Hakkında</h2>
-      <p>Ankara, Türkiye’nin başkenti ve en kalabalık ikinci şehridir. İç Anadolu Bölgesi'nde yer alır. Tarihi Hititler’e kadar uzanır ve Cumhuriyetin ilanıyla birlikte hızla modernleşmiştir. Devletin kalbi olan bu şehir, aynı zamanda kültür, sanat ve tarih açısından da oldukça zengindir.</p>
-    </section>
-<div style="background-color: black; height: 10px; width: 100%;"></div>
+  <!-- Slider -->
+  <div id="slider" class="container my-5 slider">
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-3">
+        <a href="#anitkabir"><img src="img/anitkabir.jpg" class="img-fluid rounded shadow" alt="Anıtkabir"></a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="#hamamonu"><img src="img/hamamonu.jpg" class="img-fluid rounded shadow" alt="Hamamönü"></a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="#atakule"><img src="img/atakule.jpg" class="img-fluid rounded shadow" alt="Atakule"></a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="#kocatepe"><img src="img/kocatepe.jpg" class="img-fluid rounded shadow" alt="Kocatepe Camii"></a>
+      </div>
+    </div>
+  </div>
 
-    <!-- Gezilecek Yerler -->
-    <section>
-      <h2>Gezilecek Yerler</h2>
+  <!-- İçerikler -->
+  <div class="container">
+
+    <section id="anitkabir">
+      <h2>🎖️ Anıtkabir</h2>
+      <p>Türkiye Cumhuriyeti’nin kurucusu Mustafa Kemal Atatürk'ün anıt mezarı olan Anıtkabir, Ankara'nın en anlamlı yapılarındandır. Her yıl milyonlarca ziyaretçiyi ağırlar.</p>
+    </section>
+
+    <section id="hamamonu">
+      <h2>🏘️ Hamamönü</h2>
+      <p>Tarihi evleri, sokak sanatçıları, el işi ürünleriyle Ankara'nın nostaljik atmosferini yaşatan Hamamönü, hem turistlerin hem de yerlilerin uğrak noktasıdır.</p>
+    </section>
+
+    <section id="atakule">
+      <h2>📡 Atakule</h2>
+      <p>Ankara'nın simge yapılarından biri olan Atakule, hem restoranı hem de döner platformuyla şehir manzarasını kuşbakışı izleme fırsatı sunar.</p>
+    </section>
+
+    <section id="kocatepe">
+      <h2>🕌 Kocatepe Camii</h2>
+      <p>Modern Ankara'nın en büyük camisi olan Kocatepe Camii, mimarisiyle dikkat çeker. Hem ibadet hem de ziyaret için şehrin en yoğun noktalarındandır.</p>
+    </section>
+
+    <section class="my-5">
+      <h3>📊 Ankara Hakkında Genel Bilgiler</h3>
       <ul>
-        <li><strong>Anıtkabir:</strong> Atatürk’ün anıt mezarı ve müzesi.</li>
-        <li><strong>Atatürk Orman Çiftliği:</strong> Doğa ve tarih iç içe.</li>
-        <li><strong>Hamamönü:</strong> Osmanlı dönemi mimarisiyle nostaljik sokaklar.</li>
-        <li><strong>Anadolu Medeniyetleri Müzesi:</strong> Binlerce yıllık Anadolu tarihine yolculuk.</li>
+        <li>Nüfus: Yaklaşık 5.7 milyon (2023 verilerine göre)</li>
+        <li>İklim: Karasal iklim, kışları soğuk ve kar yağışlı, yazları sıcak</li>
+        <li>Önemli İlçeler: Çankaya, Keçiören, Yenimahalle, Mamak, Etimesgut</li>
+        <li>Üniversiteler: ODTÜ, Hacettepe, Ankara Üniversitesi, Gazi Üniversitesi vb.</li>
+        <li>Ulaşım: Metro, Ankaray, EGO otobüsleri, yüksek hızlı tren</li>
       </ul>
     </section>
-<div style="background-color: black; height: 10px; width: 100%;"></div>
 
-    <!-- Slider -->
-    <section>
-      <h2>Şehirden Görseller</h2>
-      <div id="sehirSlider" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="#yer1"><img src="img/sehir1.jpeg" class="d-block w-100" alt="Anıtkabir"></a>
-          </div>
-          <div class="carousel-item">
-            <a href="#yer2"><img src="img/sehir2.jpeg" class="d-block w-100" alt="Çiftlik"></a>
-          </div>
-          <div class="carousel-item">
-            <a href="#yer3"><img src="img/sehir3.jpeg" class="d-block w-100" alt="Hamamönü"></a>
-          </div>
-          <div class="carousel-item">
-            <a href="#yer4"><img src="img/sehir4.jpeg" class="d-block w-100" alt="Müze"></a>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </section>
-<div style="background-color: black; height: 5px; width: 100%;"></div>
+  </div>
 
-    <!-- Görsel İçerik Bölümleri -->
-    <section id="yer1">
-      <h3>Anıtkabir</h3>
-      <p>Anıtkabir, Türkiye Cumhuriyeti'nin kurucusu ve ilk Cumhurbaşkanı Mustafa Kemal Atatürk’ün anıt mezarıdır. Ankara'nın Çankaya ilçesinde, Rasattepe adı verilen bir tepe üzerinde yer alır. Türkiye Cumhuriyeti’nin bağımsızlık mücadelesini simgeleyen bu yapı, hem mimarisi hem de taşıdığı anlam itibarıyla yalnızca bir mezar değil; aynı zamanda bir milli hafıza mekânıdır.</p>
-      <img src="img/sehir1.jpeg" class="img-fluid" alt="Anıtkabir">
-    </section>
-<div style="background-color: black; height: 10px; width: 100%;"></div>
-
-    <section id="yer2">
-      <h3>Atatürk Orman Çiftliği</h3>
-      <p>Atatürk Orman Çiftliği (AOÇ), Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk tarafından 1925 yılında Ankara'da kurulmuş olan tarım, hayvancılık ve doğa alanında öncü bir projedir. Kuruluş amacı, modern tarım tekniklerinin uygulanabileceği örnek bir üretim merkezi oluşturmaktır. Aynı zamanda halka sağlıklı ve uygun fiyatlı gıda ürünleri sunmak da temel hedefler arasındadır.</p>
-      <img src="img/sehir2.jpeg" class="img-fluid" alt="Çiftlik">
-    </section>
-<div style="background-color: black; height: 10px; width: 100%;"></div>
-
-    <section id="yer3">
-      <h3>Hamamönü</h3>
-      <p>Hamamönü, Ankara'nın Altındağ ilçesinde yer alan, Osmanlı dönemi mimarisini günümüze taşıyan, tarihi ve kültürel zenginliğiyle öne çıkan bir semttir. Adını, bölgede yer alan Karacabey Hamamından alan Hamamönü, geçmişi yüzyıllar öncesine uzanan bir yerleşim alanıdır. Günümüzde restore edilerek hem yerli hem de yabancı turistlerin ilgisini çeken önemli bir kültür ve sanat merkezine dönüşmüştür.</p>
-      <img src="img/sehir3.jpeg" class="img-fluid" alt="Hamamönü">
-    </section>
-<div style="background-color: black; height: 10px; width: 100%;"></div>
-
-    <section id="yer4">
-      <h3>Anadolu Medeniyetleri Müzesi</h3>
-      <p>Anadolu Medeniyetleri Müzesi, Türkiye'nin başkenti Ankara'da, Atpazarı semtinde yer alan ve Anadolu’nun binlerce yıllık tarihini sergileyen, dünya çapında saygın bir arkeoloji müzesidir. Müze, Anadolu topraklarında yaşamış olan uygarlıkların kültürel zenginliğini bir araya getirerek ziyaretçilerine adeta bir medeniyetler yolculuğu sunar.</p>
-      <img src="img/sehir4.jpeg" class="img-fluid" alt="Müze">
-    </section>
-<div style="background-color: black; height: 10px; width: 100%;"></div>
-
-    <section class="text-center mt-5">
-      <h2>Şehrimizin Takımı</h2>
-      <p>Takımımız hakkında detaylı bilgi almak için:</p>
-      <a href="takimimiz.html" class="btn btn-primary">Takımımız Sayfasına Git</a>
-    </section>
-  </main>
-
-  <footer class="footer text-center p-3 mt-5">
-    &copy; 2025 Şura Doğan - Tüm Hakları Saklıdır.
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 mt-5">
+    <p>🎬 @2025 | Web Teknolojileri Projesi - [Ad Soyad]</p>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,14 +1,16 @@
 <?php
-$email = $_POST['email'];
-$sifre = $_POST['sifre'];
-
-$dogru_email = "b2412100001@sakarya.edu.tr";
+$dogru_kullanici = "b2412100001@sakarya.edu.tr";
 $dogru_sifre = "b2412100001";
 
-if ($email == $dogru_email && $sifre == $dogru_sifre) {
-    echo "<h2>Ho�geldiniz $sifre</h2>";
-} else {
-    header("Location: login.html");
-    exit();
+if ($_POST) {
+    $email = $_POST['email'];
+    $sifre = $_POST['password'];
+
+    if ($email == $dogru_kullanici && $sifre == $dogru_sifre) {
+        echo "<h1 style='text-align:center; margin-top:50px;'>Hoşgeldiniz $sifre 🎉</h1>";
+    } else {
+        header("Location: login.html");
+        exit();
+    }
 }
 ?>
