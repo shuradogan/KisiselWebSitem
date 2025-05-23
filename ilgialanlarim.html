@@ -2,174 +2,140 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>İlgi Alanlarım - Film ve Dizi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
-  
+  <title>Özgeçmiş</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <style>
     body {
-      background-color: #b94a4a;
-      color: white;
+      display: flex;
+      margin: 0;
       font-family: Arial, sans-serif;
     }
 
-    h1 {
-      font-weight: bold;
+    .sidebar {
+      width: 220px;
+      background-color: #1c1c1c;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 20px;
     }
 
-    .film-strip {
-      overflow-x: auto ;
-      white-space: nowrap;
-      background-image: url("img/filmseridi.jpg");
-      background-repeat: repeat-x;
-      background-size: cover;
-      padding: 40px 0;
-    }
-
-    .film-card {
-      display: inline-block;
-      margin: 0 12px;
-      width: 180px;
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      color: black;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .film-card img {
-      width: 80%;
-      height: auto;
-      display: block;
-    }
-
-    .film-title {
+    .sidebar h2 {
       text-align: center;
-      font-size: 1rem;
-      padding: 8px;
-      background-color: #f8f9fa;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    .film-strip::-webkit-scrollbar {
-      height: 8px;
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    .film-strip::-webkit-scrollbar-thumb {
-      background-color: rgba(255,255,255,0.4);
-      border-radius: 4px;
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    .main-content {
+      margin-left: 220px;
+      padding: 20px;
+      width: calc(100% - 220px);
+    }
+
+    header {
+      background-color: #6c757d;
+      color: white;
+      padding: 30px 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container my-4">
-    <h1 class="text-center mb-4">Popüler Filmler</h1>
-    <div class="film-strip px-3" id="movie-list"></div>
+  <!-- Yan Menü -->
+   <div class="sidebar">
+    <h2>Menü</h2>
+    <a href="index.html">Hakkımda</a>
+    <a href="#">CV</a>
+    <a href="sehrim.html">Şehrim</a>
+    <a href="takimimiz.html">Takımımız</a>
+    <a href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="login.html">Giriş</a>
   </div>
 
-  <script>
-    const apiKey = '3e25775b9e3d6056a545f0f30d4f3a5f';
-    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=tr-TR&page=1`;
+  <!-- Ana İçerik -->
+  <div class="main-content">
+    <header class="text-center">
+      <h1>🎞️ Özgeçmiş</h1>
+      <p class="lead">Benim eğitim yolculuğum ve becerilerim</p>
+    </header>
 
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const movies = data.results;
-        const movieList = document.getElementById('movie-list');
+    <main class="container my-5">
 
-        movies.forEach(movie => {
-          const card = document.createElement('div');
-          card.className = 'film-card';
-          card.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-            <div class="film-title">${movie.title}</div>
-          `;
-          movieList.appendChild(card);
-        });
-      })
-      .catch(error => {
-        console.error("Veri alınırken hata oluştu:", error);
-      });
-  </script>
+      <section>
+        <h2>Eğitim</h2>
+        <article>
+          <h5>Bilgisayar Mühendisliği - Sakarya Üniversitesi</h5>
+          <p>2023 - Devam Ediyor</p>
+          <p>Web teknolojileri, algoritmalar ve yazılım mühendisliği alanında bilgi ediniyorum.</p>
+        </article>
 
-</body>
-</html>
+        <article>
+          <h5>XYZ Anadolu Lisesi</h5>
+          <p>2019 - 2023</p>
+          <p>Sayısal bölüm mezunu. Robotik kulübü üyesi.</p>
+        </article>
+      </section>
 
+      <section class="mt-4">
+        <h2>Yetenekler</h2>
+        <ul>
+          <li>HTML5, CSS3, Bootstrap</li>
+          <li>JavaScript, Vue.js</li>
+          <li>Python ile temel programlama</li>
+          <li>Git ve GitHub kullanımı</li>
+        </ul>
+      </section>
 
-    .film-strip {
-      overflow-x: auto ;
-      white-space: nowrap;
-      background-image: url("img/filmseridi.jpg");
-      background-repeat: repeat-x;
-      background-size: cover;
-      padding: 40px 0;
-    }
+      <section class="mt-4">
+        <h2>Projeler</h2>
+        <article>
+          <h5>Film Temalı Kişisel Web Sitesi</h5>
+          <p>HTML, CSS, Bootstrap ve JS kullanarak responsive bir kişisel web sitesi geliştirdim.</p>
+        </article>
+      </section>
 
-    .film-card {
-      display: inline-block;
-      margin: 0 12px;
-      width: 180px;
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      color: black;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+      <aside class="mt-5 bg-light p-3 border rounded">
+        <h4>📸 Yan Not</h4>
+        <p>Fotoğrafçılığa ilgim var, boş zamanlarımda sokak fotoğrafçılığı yapıyorum. Film kameralarıyla ilgiliyim.</p>
+      </aside>
 
-    .film-card img {
-      width: 80%;
-      height: auto;
-      display: block;
-    }
+      <figure class="text-center my-5">
+        <img src="img/kamera-cv.jpg" class="img-fluid shadow" alt="Kamera Temalı Görsel" style="max-width: 400px;">
+        <figcaption>Kariyerimi film gibi planlıyorum 🎬</figcaption>
+      </figure>
 
-    .film-title {
-      text-align: center;
-      font-size: 1rem;
-      padding: 8px;
-      background-color: #f8f9fa;
-    }
+    </main>
 
-    .film-strip::-webkit-scrollbar {
-      height: 8px;
-    }
-    .film-strip::-webkit-scrollbar-thumb {
-      background-color: rgba(255,255,255,0.4);
-      border-radius: 4px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container my-4">
-    <h1 class="text-center mb-4">Popüler Filmler</h1>
-    <div class="film-strip px-3" id="movie-list"></div>
+    <footer>
+      <p>🎬 @2025 | Web Teknolojileri Projesi - [Ad Soyad]</p>
+    </footer>
   </div>
-
-  <script>
-    const apiKey = '3e25775b9e3d6056a545f0f30d4f3a5f';
-    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=tr-TR&page=1`;
-
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const movies = data.results;
-        const movieList = document.getElementById('movie-list');
-
-        movies.forEach(movie => {
-          const card = document.createElement('div');
-          card.className = 'film-card';
-          card.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-            <div class="film-title">${movie.title}</div>
-          `;
-          movieList.appendChild(card);
-        });
-      })
-      .catch(error => {
-        console.error("Veri alınırken hata oluştu:", error);
-      });
-  </script>
 
 </body>
 </html>
