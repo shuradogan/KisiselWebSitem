@@ -1,6 +1,4 @@
 
-
-
 .film-strip-wrapper {
   width: calc(100vw - 220px); /* sidebar'ı hesaba kat */
   height: 100vh;
@@ -8,13 +6,10 @@
   box-sizing: border-box;
   
 }
-
 .film-card {
   flex: 0 0 180px;
   margin: 0 12px;
 }
-
-
 
 .img-polaroid {
   border: 10px solid white;
@@ -162,7 +157,6 @@ figcaption {
       background: url("img/filmseridi.jpg") repeat center center/cover;
     }
 
-   
     .hakkimda img {
       width: 250px;
       margin: 10px;
@@ -230,8 +224,6 @@ body.hakkimda {
   position: relative;
 }
 
-
-
 .section {
   height: 100vh;
   width: 100%;
@@ -242,9 +234,6 @@ body.hakkimda {
   flex-direction: column;
   box-sizing: border-box;
 }
-
-
-
     header {
       background-color: #6c757d;
       color: white;
@@ -256,7 +245,6 @@ body.hakkimda {
       background-color: #1c1c1c;
       color: white;
       text-align: center;
-    
       margin-top: 40px;
       border-radius: 8px;
     }
