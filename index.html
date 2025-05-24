@@ -2,88 +2,102 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <title>Film Şeridi - Şura</title>
+   <link rel="stylesheet" href="css/style.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hakkımda</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body class="hakkimda">
+  <div class="sidebar">
+    <h2>Menü</h2>
+    <a href="#">Hakkımda</a>
+    <a href="cv.html">CV</a>
+    <a href="sehrim.html">Şehrim</a>
+    <a href="takimimiz.html">Takımımız</a>
+    <a href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="login.html">Giriş</a>
+  </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark film-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#">🎬 Ben Kimim?</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
-        </ul>
-      </div>
+  <div class="main-content">
+    <div class="film-strip-wrapper" id="slider">
+      <section class="section s1">
+        <h1>Merhaba! Ben Şura</h1>
+        <p>Bu web sitesinde kendimi ve memleketimi tanıtıyorum.</p>
+      </section>
+
+      <section class="section s2">
+        <h1>Hobilerim</h1>
+        <p>Dizi-Film İzlemek</p>
+        <img src="img/etkinlik1.jpeg" alt="">
+      </section>
+
+      <section class="section s3">
+        <h1>Hobilerim</h1>
+        <p>Yazı Yazmak</p>
+        <img src="img/etkinlik2.jpeg" alt="">
+      </section>
+
+      <section class="section s4">
+        <h1>Hobilerim</h1>
+        <p>Örgü Örmek/Dikiş</p>
+        <img src="img/etkinlik3.jpeg" alt="">
+      </section>
+
+      <section class="section s5">
+        <h1>ÖZGEÇMİŞİM</h1>
+        <a href="cv.html" class="btn btn-light mt-3">CV Sayfasına Git</a>
+      </section>
+
+      <section class="section s6">
+        <h1>Şehrim</h1>
+        <a href="sehrim.html" class="btn btn-light mt-3">Şehrim Sayfasına Git</a>
+      </section>
+
+      <section class="section s7">
+        <h1>Takımımız</h1>
+        <a href="takimimiz.html" class="btn btn-light mt-3">Takımımız Sayfasına Git</a>
+      </section>
+
+      <section class="section s8">
+        <h1>İlgi Alanlarım</h1>
+        <a href="ilgi-alanlarim.html" class="btn btn-light mt-3">İlgi Alanlarım Sayfasına Git</a>
+      </section>
+
+      <section class="section s9">
+        <h1>Beni Takip Et</h1>
+        <p>
+          <a href="https://www.instagram.com/ssuradogn/" target="_blank" style="color: lightblue;">Instagram</a> |
+          <a href="https://www.linkedin.com/in/ssuradogn/" target="_blank" style="color: lightblue;">LinkedIn</a>
+        </p>
+      </section>
     </div>
-  </nav>
+  </div>
 
-  <!-- Giriş Bölümü -->
-  <header class="text-center bg-dark text-light py-5 film-header">
-    <div class="container">
-      <h1 class="display-4">🎥 Merhaba, Ben [Ad Soyad]</h1>
-      <p class="lead">Bilgisayar mühendisliği öğrencisi olarak kodlamaya ve sinema dünyasına meraklıyım.</p>
-    </div>
-  </header>
+  <div class="arrow up" onclick="prevSlide()">&#8593;</div>
+  <div class="arrow down" onclick="nextSlide()">&#8595;</div>
 
-  <!-- Hakkımda -->
-  <section class="container my-5">
-    <h2 class="text-center mb-4">Hakkımda</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <img src="img/polaroid1.jpg" alt="Ben" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-md-6">
-        <p>Merhaba! Ben bilgisayar mühendisliği 1. sınıf öğrencisiyim. Yazılım geliştirmeye, teknolojiye, filmlere ve sinema estetiğine ilgim var. Boş zamanlarımda web geliştirme öğreniyor, fotoğraf çekiyor ve film analizleri yapıyorum.</p>
-        <p><strong>Hobilerim:</strong> Kodlama, Film izlemek, Fotoğrafçılık, Gezmeyi severim.</p>
-        <p><strong>Favori Spor:</strong> Futbol</p>
-      </div>
-    </div>
-  </section>
+  <script>
+    let currentSlide = 0;
+    const totalSlides = 9;
 
-  <!-- Polaroid Tarzı Galeri -->
-  <section class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Favori Anlarım 🎞️</h2>
-      <div class="row text-center">
-        <div class="col-md-3">
-          <img src="img/foto1.jpg" class="img-polaroid mb-2" alt="Etkinlik 1">
-          <p>Film Festivali</p>
-        </div>
-        <div class="col-md-3">
-          <img src="img/foto2.jpg" class="img-polaroid mb-2" alt="Etkinlik 2">
-          <p>Kodlama Maratonu</p>
-        </div>
-        <div class="col-md-3">
-          <img src="img/foto3.jpg" class="img-polaroid mb-2" alt="Etkinlik 3">
-          <p>Yaz Kampı</p>
-        </div>
-        <div class="col-md-3">
-          <img src="img/foto4.jpg" class="img-polaroid mb-2" alt="Etkinlik 4">
-          <p>Sinema Kulübü</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) currentSlide++;
+      updateSlider();
+    }
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light text-center py-3">
-    <p>🎬 @2025 | Web Teknolojileri Projesi - [Ad Soyad]</p>
-  </footer>
+    function prevSlide() {
+      if (currentSlide > 0) currentSlide--;
+      updateSlider();
+    }
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    function updateSlider() {
+      const wrapper = document.getElementById('slider');
+      wrapper.style.transform = `translateY(-${currentSlide * 100}vh)`;
+    }
+  </script>
 </body>
 </html>
+
 
