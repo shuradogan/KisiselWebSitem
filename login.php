@@ -1,6 +1,6 @@
 <?php
-$dogru_kullanici = "b2412100001@sakarya.edu.tr";
-$dogru_sifre = "b2412100001";
+$dogru_kullanici = "b231210039@sakarya.edu.tr";
+$dogru_sifre = "b231210039";
 
 if ($_POST) {
     $email = $_POST['email'];

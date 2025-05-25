@@ -40,7 +40,7 @@
 
   <!-- Footer -->
   <footer class="bg-dark text-light text-center py-3 mt-5">
-    <p>🎬 @2025 | Web Teknolojileri Projesi - Şura Doğan</p>
+    <p> @2025 | Web Teknolojileri Projesi - Şura Doğan</p>
   </footer>
 
   <!-- JS -->
@@ -59,6 +59,10 @@
       }
       return true;
     }
+    if (!email.endsWith("@sakarya.edu.tr")) {
+  alert("Sadece sakarya.edu.tr uzantılı mail adresi giriniz.");
+  return false;
+}
   </script>
 
 </body>
