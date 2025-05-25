@@ -10,7 +10,7 @@
 </head>
 <body class="hakkimda">
   <div class="sidebar">
-    <h2>Menü</h2>
+    <h2>ŞURA DOĞAN</h2>
     <a href="#">Hakkımda</a>
     <a href="cv.html">CV</a>
     <a href="sehrim.html">Şehrim</a>
@@ -25,47 +25,61 @@
       <section class="section s1">
         <h1>Merhaba! Ben Şura</h1>
         <p>Bu web sitesinde kendimi ve memleketimi tanıtıyorum.</p>
+        <figure class="text-center my-5">
+        <img src="img/kamera-cv.jpg" class="img-fluid shadow" alt="Kamera Temalı Görsel" style="max-width: 200px;">
+      </figure>
+    <main class="container my-5">
       </section>
 
       <section class="section s2">
-        <h1>Hobilerim</h1>
-        <p>Dizi-Film İzlemek</p>
-        <img src="img/etkinlik1.jpeg" alt="">
+         <h1>Hobilerim</h1>
+
+  <section class="hobi-container">
+    <div class="hobi-card">
+      <img src="img/etkinlik1.jpeg" alt="Dizi-Film İzlemek">
+      <p>Dizi-Film İzlemek</p>
+    </div>
+
+    <div class="hobi-card">
+      <img src="img/etkinlik2.jpeg" alt="Yazı Yazmak">
+      <p>Yazı Yazmak</p>
+    </div>
+
+    <div class="hobi-card">
+      <img src="img/etkinlik3.jpeg" alt="Örgü Örmek/Dikiş">
+      <p>Örgü Örmek / Dikiş</p>
+    </div>
+  </section>
       </section>
 
       <section class="section s3">
-        <h1>Hobilerim</h1>
-        <p>Yazı Yazmak</p>
-        <img src="img/etkinlik2.jpeg" alt="">
-      </section>
-
-      <section class="section s4">
-        <h1>Hobilerim</h1>
-        <p>Örgü Örmek/Dikiş</p>
-        <img src="img/etkinlik3.jpeg" alt="">
-      </section>
-
-      <section class="section s5">
         <h1>ÖZGEÇMİŞİM</h1>
         <a href="cv.html" class="btn btn-light mt-3">CV Sayfasına Git</a>
       </section>
 
-      <section class="section s6">
+      <section class="section s4">
         <h1>Şehrim</h1>
         <a href="sehrim.html" class="btn btn-light mt-3">Şehrim Sayfasına Git</a>
+        <figure class="text-center my-5">
+        <img src="img/ankara.jpg" class="img-fluid shadow"  style="max-width: 700;">
+      </figure>
+    <main class="container my-5">
+      </section>
+
+      <section class="section s5">
+        <h1>Takımımız</h1>
+        <a href="takimimiz.html" class="btn btn-light mt-3">Takımımız Sayfasına Git</a>
+        <figure class="text-center my-5">
+        <img src="img/ag.png" class="img-fluid shadow"  style="max-width: 700;">
+      </figure>
+      </section>
+
+      <section class="section s6">
+        <h1>İlgi Alanlarım</h1>
+        <a href="ilgi-alanlarim.html" class="btn btn-light mt-3">Popüler Filmler Sayfasına Git</a>
       </section>
 
       <section class="section s7">
-        <h1>Takımımız</h1>
-        <a href="takimimiz.html" class="btn btn-light mt-3">Takımımız Sayfasına Git</a>
-      </section>
-
-      <section class="section s8">
-        <h1>İlgi Alanlarım</h1>
-        <a href="ilgi-alanlarim.html" class="btn btn-light mt-3">İlgi Alanlarım Sayfasına Git</a>
-      </section>
-
-      <section class="section s9">
         <h1>Beni Takip Et</h1>
         <p>
           <a href="https://www.instagram.com/ssuradogn/" target="_blank" style="color: lightblue;">Instagram</a> |
@@ -80,7 +94,7 @@
 
   <script>
     let currentSlide = 0;
-    const totalSlides = 9;
+    const totalSlides = 7;
 
     function nextSlide() {
       if (currentSlide < totalSlides - 1) currentSlide++;
