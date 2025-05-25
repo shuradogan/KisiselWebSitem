@@ -27,45 +27,46 @@
   <main class="container my-5" id="app">
     <h2 class="text-center mb-4">Bana Ulaşın</h2>
 
-    <form id="contactForm" @submit.prevent="validateForm" method="POST" action="form-sonuc.html">
-      <div class="mb-3">
-        <label>Ad Soyad</label>
-        <input type="text" class="form-control" v-model="form.adsoyad">
-      </div>
-      <div class="mb-3">
-        <label>Email</label>
-        <input type="email" class="form-control" v-model="form.email">
-      </div>
-      <div class="mb-3">
-        <label>Telefon</label>
-        <input type="text" class="form-control" v-model="form.telefon">
-      </div>
-      <div class="mb-3">
-        <label>Cinsiyet</label><br>
-        <input type="radio" value="Erkek" v-model="form.cinsiyet"> Erkek
-        <input type="radio" value="Kadın" v-model="form.cinsiyet" class="ms-3"> Kadın
-      </div>
-      <div class="mb-3">
-        <label>Şehir</label>
-        <select class="form-select" v-model="form.sehir">
-          <option value="">Seçiniz</option>
-          <option>Ankara</option>
-          <option>İstanbul</option>
-          <option>İzmir</option>
-          <option>Diğer</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label>Mesaj</label>
-        <textarea class="form-control" v-model="form.mesaj"></textarea>
-      </div>
-      <div class="mb-3">
-        <input type="checkbox" v-model="form.haber"> Haber bültenine katılmak istiyorum
-      </div>
+  <form id="contactForm" @submit.prevent="validateForm" method="POST" action="form-goster.php">
+  <div class="mb-3">
+    <label>Ad Soyad</label>
+    <input type="text" class="form-control" name="adsoyad" v-model="form.adsoyad">
+  </div>
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" v-model="form.email">
+  </div>
+  <div class="mb-3">
+    <label>Telefon</label>
+    <input type="text" class="form-control" name="telefon" v-model="form.telefon">
+  </div>
+  <div class="mb-3">
+    <label>Cinsiyet</label><br>
+    <input type="radio" value="Erkek" name="cinsiyet" v-model="form.cinsiyet"> Erkek
+    <input type="radio" value="Kadın" name="cinsiyet" v-model="form.cinsiyet" class="ms-3"> Kadın
+  </div>
+  <div class="mb-3">
+    <label>Şehir</label>
+    <select class="form-select" name="sehir" v-model="form.sehir">
+      <option value="">Seçiniz</option>
+      <option>Ankara</option>
+      <option>İstanbul</option>
+      <option>İzmir</option>
+      <option>Diğer</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Mesaj</label>
+    <textarea class="form-control" name="mesaj" v-model="form.mesaj"></textarea>
+  </div>
+  <div class="mb-3">
+    <input type="checkbox" name="haber" v-model="form.haber"> Haber bültenine katılmak istiyorum
+  </div>
 
-      <button type="button" class="btn btn-secondary me-2" @click="resetForm">Temizle (Vue.js)</button>
-      <button type="submit" class="btn btn-primary">Gönder (Vue.js)</button>
-    </form>
+  <button type="button" class="btn btn-secondary me-2" @click="resetForm">Temizle (Vue.js)</button>
+  <button type="submit" class="btn btn-primary">Gönder (Vue.js)</button>
+</form>
+
 
     <hr class="my-5">
 
@@ -138,8 +139,5 @@
       alert("JavaScript kontrolü başarılı!");
     }
   </script>
-
 </body>
 </html>
-
-
